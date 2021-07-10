@@ -1,0 +1,19 @@
+buildscript{
+	defaultTasks 'jar'
+}
+plugins{
+	id 'java-library'
+}
+repositories{
+	maven{url '/mnt/Work/maven'}
+	maven{url 'https://maven.aliyun.com/nexus/content/groups/public/'}
+	maven{url 'https://maven.aliyun.com/nexus/content/repositories/jcenter'}
+	maven{url 'https://mirrors.163.com/maven/repository/maven-public/'}
+	jcenter()
+	google()
+}
+dependencies{
+	api 'org.apache.commons:commons-math3:3.6.1'
+	implementation 'com.google.guava:guava:29.0-jre'
+	testImplementation 'junit:junit:4.13'
+}
